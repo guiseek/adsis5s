@@ -1,10 +1,6 @@
-<form
-  method="post"
-  enctype="application/x-www-form-urlencoded"
-  action="https://pizza.example.com/order.cgi"
->
+<form>
   <p>
-    <label>Customer name: <input name="custname" required /></label>
+    <label>Customer name: <input name="custname"  required minlength="8" /></label>
   </p>
   <p>
     <label>Telephone: <input type="tel" name="custtel" /></label>
@@ -26,7 +22,7 @@
     </p>
     <p>
       <label>
-        <input type="radio" name="size" required value="large" /> Large
+        <input type="radio" name="size" required checked value="large" /> Large
       </label>
     </p>
   </fieldset>
@@ -58,6 +54,7 @@
       Preferred delivery time:
       <input
         type="time"
+        value="21:00"
         min="11:00"
         max="21:00"
         step="900"
@@ -66,8 +63,30 @@
       />
     </label>
   </p>
+  <input type="range" min="-100" max="100" value="0" step="10" name="power" list="powers">
+  <datalist id="powers">
+  <option value="0">
+  <option value="-30">
+  <option value="30">
+   <option value="++50">
+  </datalist>
   <p>
-    <label>Delivery instructions: <textarea name="comments"></textarea></label>
+    <label
+      >Credit card number:
+      <input
+        name="cc"
+        type="text"
+        inputmode="numeric"
+        pattern="[0-9]{8,19}"
+        autocomplete="cc-number"
+      />
+    </label>
+  </p>
+  <p>
+    <label class="align-center">
+      Delivery instructions:
+      <textarea name="comments"></textarea>
+    </label>
   </p>
   <p><button>Submit order</button></p>
 </form>

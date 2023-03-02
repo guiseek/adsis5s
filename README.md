@@ -27,7 +27,6 @@ Copia a URL, vai pro terminal e digita:
 `git clone SUA URL .git`
 
 > Ex
->
 > https://github.com/guiseek/adsis5s.git
 
 Acesse o diretório do projeto clonado no vscode e execute no terminal
@@ -37,6 +36,8 @@ Acesse o diretório do projeto clonado no vscode e execute no terminal
 `npm run dev`
 
 ### Forms validation
+
+[Link WHATWG Form Input Type](https://html.spec.whatwg.org/dev/input.html)
 </details>
 
 <!-- <details>
